@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Triana Clavero</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/modal.css">
 </head>
 <body>
     <section class="headboard" >
@@ -57,26 +58,35 @@
   
     
 
-    <div class="contact">
+    <div id="contact" class="contact">
         <section class="data">
             <p>W.C.Morris, Buenos Aires <br>(54)11 3503 9639 <br> trianaclavero13@gmail.com  <br> <a href="http://www.linkedin.com/in/triana-clavero-59b760241">Perfil LinkedIn</a></p>
         </section>
         <section class="form">
-            <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" placeholder="Nombre">
-            <br>
-            <label for="Asunto">Asunto</label>
-            <input type="text" id="Asunto" placeholder="Asunto">
-            <br>
-            <label for="Mensaje">Mensaje</label>
-            <textarea name="Mensaje" id="Mensaje" cols="30" rows="10"></textarea>
-            <button type="submit">Enviar</button>
+            <form id="form-validation">
+                <label for="Nombre">Nombre</label>
+                <input type="text" id="Nombre" placeholder="Nombre">
+                <span id="Nombre-span" class="error-message"></span>
+                <br>
+                <label for="Asunto">Asunto</label>
+                <input type="text" id="Asunto" placeholder="Asunto">
+                <span id="Asunto-span" class="error-message"></span>
+                <br>
+                <label for="Mensaje">Mensaje</label>
+                <textarea name="Mensaje" id="Mensaje" cols="30" rows="10"></textarea>
+                <span id="Mensaje-span" class="error-message"></span>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-           
-</div>
-    
+    </div>
 
-    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
 
+    <script src="./scripts/validation.js"></script>
 </body>
 </html>

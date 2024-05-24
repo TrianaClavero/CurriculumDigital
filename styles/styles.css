@@ -6,19 +6,20 @@
 
 body{
     background-color: #EFF2F9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
-
 
 .headboard{
     text-align: Left;
     margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-
+    color: #6E808E;
 }
 
 .headboard h1{
     font-size: 45px;
-    color: #6E808E;
 }
 
 .headboard p{
@@ -29,20 +30,25 @@ body{
 }
 
 .presentation{
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin: 20px 10px;
     font-size: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .box{
     margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .box h2{
     text-align: left;
-    margin: 10px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     font-size: 20px;
     color: #B5BFF1;
@@ -50,9 +56,27 @@ body{
 
 .box h3{
     text-align: left;
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
     font-size: 15px;
+}
+
+.box p, .box ul, .box li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #e4e4e4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .education{
@@ -75,32 +99,69 @@ body{
 }
 
 .contact{
-    margin: 0 auto ;
-    align-items:center
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.data{
-    width: 50%;
-    margin: 0 auto 
+.data, .form {
+    margin: 10px 0;
+    width: 100%;
 }
 
-.form{
-    width: 50%;
-    margin: 0 auto ;
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
 }
 
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
 
-@media (width > 768px){
+button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+button:hover {
+    background: #555;
+}
 
-
-
-    .box:hover  {
-        border-radius: 10px;
-        box-shadow: -23px -23px 45px #ffffff,
-            28px 28px 50px #0d2750;
-        scale: 0.99;
-        transform: translateX(5px) translateY(5px);
-        transition: 250ms;
+@media (min-width: 481px) {
+    .contact {
+        flex-direction: row;
+        justify-content: space-between;
     }
+
+    .data, .form {
+        width: 45%;
+    }
+
+    .box:hover {
+        border-radius: 10px;
+        box-shadow: -23px -23px 45px #ffffff, 28px 28px 50px #0d275087;
+        transform: scale(0.99) translateX(3px) translateY(3px);
+        transition: 350ms;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.invalid {
+    border-color: red;
 }
