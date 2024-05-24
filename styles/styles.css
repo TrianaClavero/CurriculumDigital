@@ -79,11 +79,6 @@ li {
     border-radius: 3px;
 }
 
-.education{
-    margin: 10px;
-    padding: 5px;
-}
-
 .acknowledgment{
     list-style-type: none;
 }
@@ -139,7 +134,20 @@ button:hover {
     background: #555;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
+    .top-row, .bottom-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-row .box {
+        width: 32%;
+    }
+
+    .bottom-row .box {
+        width: 48%;
+    }
+
     .contact {
         flex-direction: row;
         justify-content: space-between;
